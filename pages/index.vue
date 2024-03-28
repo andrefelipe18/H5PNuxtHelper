@@ -11,9 +11,8 @@ definePageMeta({
         <div class="mt-20 flex justify-center">
             <ScreenSizeModal />
         </div>
-        <div class="mt-10 flex justify-center gap-20">
-            <OneElementCenter />
-            <MoreElementsCenter />
+        <div class="mt-10 w-full flex justify-center">
+            <ElementCenter />
         </div>
     </main>
 </template>
