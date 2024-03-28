@@ -8,7 +8,7 @@ const props = defineProps<{
 }>();
 </script>
 <template>
-    <div class="bg-[#191e24] p-5 rounded-lg">
+    <div class="bg-[#191e24] p-5 rounded-lg h-">
         <h2>Calcular centro para 1 elemento</h2>
         <div class="">
             <label class="form-control w-full max-w-xs">
