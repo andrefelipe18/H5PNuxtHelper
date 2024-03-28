@@ -1,7 +1,20 @@
 <script setup lang="ts">
-
+definePageMeta({
+    layout: 'default'
+})
 </script>
 <template>
-    <h1>Index</h1>
+    <main class="w-full flex flex-col p-5">
+        <h1 class="text-4xl font-bold text-center mt-8">H5P - Helper</h1>
+        <p class="text-lg text-center mt-4">Ir para meus Projetos</p>
+
+        <div class="mt-20 flex justify-center">
+            <ScreenSizeModal />
+        </div>
+        <div class="mt-10 flex justify-center gap-20">
+            <OneElementCenter />
+            <MoreElementsCenter />
+        </div>
+    </main>
 </template>
 <style scoped></style>
