@@ -27,30 +27,14 @@ watch(elementItemsQuantity, (newQuantity) => {
 });
 
 const newElement = () => {
-    let project = props.project;
+    const elementsStore = useStorage('elements', []);
 
-    // vai no localStorage projects
-    let projects = JSON.parse(localStorage.getItem('projects'));
-
-    // pega o projeto atual
-    let currentProject = projects.find((p) => p.id === project.id);
-
-    // adiciona o novo elemento
-    currentProject.elements.push({
+    elementsStore.value.push({
+        projectId: props.project.id,
+        id: Math.random().toString(36).substr(2, 9),
         name: elementName.value,
-        items: elementItems.value,
+        items: elementItems.value
     });
-
-    // atualiza o projeto
-    projects = projects.map((p) => {
-        if (p.id === project.id) {
-            return currentProject;
-        }
-        return p;
-    });
-
-    // salva no localStorage
-    localStorage.setItem('projects', JSON.stringify(projects));
 };
 </script>
 <template>

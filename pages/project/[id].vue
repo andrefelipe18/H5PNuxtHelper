@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import { useStorage } from "@vueuse/core";
 
 const route = useRoute();
@@ -8,7 +8,7 @@ const projects = useStorageAsync('projects', []);
 const project = ref(null);
 
 watch(projects, () => {
-    project.value = projects.value.find((p: any) => p.id === id);
+    project.value = projects.value.find((p) => p.id === id);
 });
 </script>
 <template>
